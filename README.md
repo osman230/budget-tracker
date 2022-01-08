@@ -1,5 +1,6 @@
 # Budget Tracker
-
+License
+MIT
 # Usage
 
 A budget tracker that allows the user to add expenses and deposits to their budget with or without a connection.
