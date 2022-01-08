@@ -18,7 +18,7 @@ request.onupgradeneeded = function(event) {
 request.onsuccess = function(event) {
     db = event.target.result;
     if (navigator.onLine) {
-        addTransaction();
+        uploadTransaction();
     }
 };
 
@@ -38,7 +38,7 @@ function saveRecord(record) {
     //
     };
 
-function addTransaction() {
+function uploadTransaction() {
     //
     const transaction = db.transaction(["new_budget"], "readwrite");
     const store = transaction.objectStore("new_budget");
@@ -72,4 +72,4 @@ function addTransaction() {
     }
 }
 
-window.addEventListener("online", addTransaction);
+window.addEventListener("online", uploadTransaction);
